@@ -1,24 +1,22 @@
-// GLOBALS - No window
-// _dirname = filename
-// require = function to use modules(common JS)
-// module = info about current module
-// process = info about env where the program is being executed
-// console.log(__dirname)
+const os = require('os')
+// info aboout current user
 
-// setInterval(()=>{
-//     console.log('Hello World!')
-// }, 1000)
+const user = os.userInfo()
+console.log(user);
+
+// method returns the system uptime in seconds
+
+console.log(`the system uptime is ${os.uptime()} seconds`)
+
+const currentOS = {
+    name: os.type(),
+    release: os.release(),
+    totalMem: os.totalmem(),
+    freeMem: os.freemem()
+}
+
+console.log(currentOS)
 
 
-// Modules
 
-
-const names = require('./4-names');
-const sayHi = require('./5-utils')
-
-const data = require('./6-alternative-flavor')
-console.log(data);
-require('./7-mind-grenade')
-// sayHi('susan')
-// sayHi(names.john)
-// sayHi(names.peter)
+// 1:04:23
